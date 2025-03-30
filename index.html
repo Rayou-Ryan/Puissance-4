@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="config-container">
+        <h2>Configuration du jeu</h2>
+        <form id="config-form">
+            <label for="rows">Nombre de lignes :</label>
+            <input type="number" id="rows" name="rows" min="4" max="10" value="6" required>
+
+            <label for="cols">Nombre de colonnes :</label>
+            <input type="number" id="cols" name="cols" min="4" max="10" value="7" required>
+
+            <label for="player1-color">Couleur du Joueur 1 :</label>
+            <input type="color" id="player1-color" name="player1-color" value="#ff0000" required>
+
+            <label for="player2-color">Couleur du Joueur 2 :</label>
+            <input type="color" id="player2-color" name="player2-color" value="#ffff00" required>
+
+            <button type="submit">Commencer la partie</button>
+        </form>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="current-player">Joueur Rouge, à vous de jouer !</div>
+        <div id="score">Score - Rouge: 0, Jaune: 0</div>
+        <div id="board"></div>
+        <button id="undo-btn">Annuler le dernier coup</button>
+    </div>
+
+    <div id="game-over">
+        <h1 id="winner-text"></h1>
+        <button id="restart-btn">Nouvelle Partie</button>
+        <button id="reconfigure-btn">Reconfigurer</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
